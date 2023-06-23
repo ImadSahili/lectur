@@ -28,6 +28,7 @@ textarea {
   font-size: 1.2rem;
   border-radius: 30px;
   outline: none;
+  
 }
 
 button{
@@ -47,5 +48,8 @@ button:hover{
 }
 
 i{
-    color: white;
+    color: gray;
+    position:absolute;
+    right: 10%;
+    top: 6%;
 }
