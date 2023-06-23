@@ -28,35 +28,40 @@ textarea {
   font-size: 1.2rem;
   border-radius: 30px;
   outline: none;
-  
 }
 
-button{
-    margin-top: 1rem;
-    width: 150px;
-    padding: .5rem 1rem;
-    background-color: gray;
-    border-radius: 15px;
-    outline: none;
-    border: 1px solid transparent;
-    cursor: pointer;
+button {
+  margin-top: 1rem;
+  width: 150px;
+  padding: 0.5rem 1rem;
+  background-color: gray;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: black;
   border: 1px solid gray;
 }
 
-i{
-    color: gray;
-    position:absolute;
-    right: 10%;
-    top: 6%;
+i {
+  color: gray;
+  position: relative;
+  right: 10%;
+  bottom: 4%;
 }
 
-e{
+e {
   color: gray;
-  position: absolute;
-  right: 20%;
-  top: 6%;
+  position: relative;
+  bottom: 6%;
+}
+.icon{
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 3%;
 }

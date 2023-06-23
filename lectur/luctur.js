@@ -1,20 +1,24 @@
 const textarea = document.querySelector("textarea");
 const btnSpeck = document.querySelector("i");
 const btnMacro = document.querySelector("e");
-
+const select=document.querySelector("select")
+let lang="ar-MA"
 btnSpeck.addEventListener("click", () => {
   const textSpeck = new SpeechSynthesisUtterance(textarea.value);
   speechSynthesis.speak(textSpeck);
 });
+
+select.addEventListener("change",()=>{
+  lang=select.value
+})
 
 function startSpeechRecognition() {
   // التحقق مما إذا كان المتصفح يدعم واجهة التعرف على الكلام
   if ("webkitSpeechRecognition" in window) {
     // إنشاء كائن لواجهة التعرف على الكلام
     var recognition = new webkitSpeechRecognition();
-
     // تعيين إعدادات لواجهة التعرف على الكلام
-    recognition.lang = "en"; // تحديد اللغة للتعرف على الكلام (بالعربية)
+    recognition.lang = lang; // تحديد اللغة للتعرف على الكلام (بالعربية)
     recognition.continuous = false; // التعرف على الكلام المستمر (بدون توقف)
 
     // تنفيذ عندما يتم الكشف عن كلام
