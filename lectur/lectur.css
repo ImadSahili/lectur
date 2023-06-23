@@ -53,3 +53,10 @@ i{
     right: 10%;
     top: 6%;
 }
+
+e{
+  color: gray;
+  position: absolute;
+  right: 20%;
+  top: 6%;
+}
