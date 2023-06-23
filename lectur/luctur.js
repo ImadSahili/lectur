@@ -3,6 +3,6 @@ const btnSpeck = document.querySelector("button");
 
 btnSpeck.addEventListener("click", () => {
   const textSpeck = new SpeechSynthesisUtterance(textarea.value);
-  textSpeck.lang="ar-AE"
+  textSpeck.lang=""
   speechSynthesis.speak(textSpeck);
 });
