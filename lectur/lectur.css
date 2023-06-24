@@ -1,4 +1,4 @@
-::selection{
+::selection {
   background-color: rgba(128, 128, 128, 0.507);
 }
 * {
@@ -31,7 +31,6 @@ textarea {
   font-size: 1.2rem;
   border-radius: 30px;
   outline: none;
-
 }
 
 button {
@@ -63,10 +62,17 @@ e {
   bottom: 6%; */
   /* margin: 0 1.5rem; */
 }
-.icon{
+
+e:hover {
+ color: darkslategray;
+}
+i:hover {
+  color:darkslategray;
+}
+.icon {
   width: 150px;
   display: flex;
   justify-content: space-between;
   position: relative;
-  bottom: 3%;
+  bottom: 4%;
 }

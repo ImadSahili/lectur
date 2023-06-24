@@ -70,7 +70,7 @@ btnMacro.addEventListener("click", () => {
 });
 
 btnCop.addEventListener("click", () => {
-  textarea.select();
+  // textarea.select();
   textarea.setSelectionRange(0, 99999); // For mobile devices
 
   // Copy the text inside the text field
