@@ -6,20 +6,36 @@ const btnMacro = document.querySelector("e");
 const select = document.querySelector("select");
 let lang = "ar-MA";
 
-
 select.addEventListener("change", () => {
   lang = select.value;
+  if (lang === "ar-MA") {
+    document.documentElement.lang = "ar-MA";
+    document.documentElement.dir = "rtl";
+    textarea.placeholder = " ادخل النص ";
+  } else if (lang === "en-US") {
+    document.documentElement.lang = "en-US";
+    document.documentElement.dir = "trl";
+    textarea.placeholder = "Enter the text";
+  } else if (lang === "fr-FR") {
+    document.documentElement.lang = "fr-FR";
+    document.documentElement.dir = "trl";
+    textarea.placeholder = "Entrez le texte";
+  }
 });
-
-
 
 btnSpeck.addEventListener("click", () => {
-  const textSpeck = new SpeechSynthesisUtterance(textarea.value);
-  textSpeck.lang=lang
+  const textSpeck = new SpeechSynthesisUtterance();
+  textSpeck.lang = lang;
+  textSpeck.text = textarea.value;
+  // textSpeck.voice=speechSynthesis.getVoices().find(voice=>voice.name=='Google Français')
+  // textSpeck.rate=0.5
+  // textSpeck.volume=.5
+  // const voice=speechSynthesis.getVoices
+  // voice.forEach(function(voice,index){
+  //   console.log(voice.name+" "+index)
+  // })
   speechSynthesis.speak(textSpeck);
 });
-
-
 
 function startSpeechRecognition() {
   // التحقق مما إذا كان المتصفح يدعم واجهة التعرف على الكلام
@@ -52,4 +68,3 @@ function startSpeechRecognition() {
 btnMacro.addEventListener("click", () => {
   startSpeechRecognition();
 });
-
