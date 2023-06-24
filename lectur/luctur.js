@@ -12,11 +12,12 @@ select.addEventListener("change", () => {
     document.documentElement.lang = "ar-MA";
     document.documentElement.dir = "rtl";
     textarea.placeholder = " ادخل النص ";
-    navigator.keyboard="ar-MA"
   } else if (lang === "en-US") {
     document.documentElement.lang = "en-US";
     document.documentElement.dir = "trl";
     textarea.placeholder = "Enter the text";
+    document.documentElement.lang="en"
+
   } else if (lang === "fr-FR") {
     document.documentElement.lang = "fr-FR";
     document.documentElement.dir = "trl";
