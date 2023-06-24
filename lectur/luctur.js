@@ -1,16 +1,25 @@
+// import translate from "google-translate-api"
+
 const textarea = document.querySelector("textarea");
 const btnSpeck = document.querySelector("i");
 const btnMacro = document.querySelector("e");
-const select=document.querySelector("select")
-let lang="ar-MA"
+const select = document.querySelector("select");
+let lang = "ar-MA";
+
+
+select.addEventListener("change", () => {
+  lang = select.value;
+});
+
+
+
 btnSpeck.addEventListener("click", () => {
   const textSpeck = new SpeechSynthesisUtterance(textarea.value);
+  textSpeck.lang=lang
   speechSynthesis.speak(textSpeck);
 });
 
-select.addEventListener("change",()=>{
-  lang=select.value
-})
+
 
 function startSpeechRecognition() {
   // التحقق مما إذا كان المتصفح يدعم واجهة التعرف على الكلام
@@ -43,3 +52,4 @@ function startSpeechRecognition() {
 btnMacro.addEventListener("click", () => {
   startSpeechRecognition();
 });
+
