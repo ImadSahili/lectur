@@ -51,6 +51,7 @@ button:hover {
 
 i {
   color: gray;
+  cursor: pointer;
   /* position: relative;
   right: 10%;
   bottom: 4%; */
@@ -58,6 +59,7 @@ i {
 
 e {
   color: gray;
+  cursor: pointer;
   /* position: relative;
   bottom: 6%; */
   /* margin: 0 1.5rem; */
