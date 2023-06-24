@@ -1,3 +1,6 @@
+::selection{
+  background-color: rgba(128, 128, 128, 0.507);
+}
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +31,7 @@ textarea {
   font-size: 1.2rem;
   border-radius: 30px;
   outline: none;
+
 }
 
 button {
@@ -48,19 +52,19 @@ button:hover {
 
 i {
   color: gray;
-  position: relative;
+  /* position: relative;
   right: 10%;
-  bottom: 4%;
+  bottom: 4%; */
 }
 
 e {
   color: gray;
-  position: relative;
-  bottom: 6%;
-  margin: 0 1.5rem;
+  /* position: relative;
+  bottom: 6%; */
+  /* margin: 0 1.5rem; */
 }
 .icon{
-  width: 120px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
   position: relative;
