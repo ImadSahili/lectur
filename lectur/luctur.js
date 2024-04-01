@@ -3,6 +3,7 @@ const btnSpeck = document.querySelector("i");
 const btnMacro = document.querySelector("e");
 const select = document.querySelector("select");
 const btnCop = document.getElementById("copy");
+const btnDelete = document.getElementById("delete");
 let lang = "ar-MA";
 
 select.addEventListener("change", () => {
@@ -65,9 +66,7 @@ function startSpeechRecognition() {
   }
 }
 
-btnMacro.addEventListener("click", () => {
-  startSpeechRecognition();
-});
+btnMacro.addEventListener("click", () => startSpeechRecognition());
 
 btnCop.addEventListener("click", () => {
   // textarea.select();
@@ -76,3 +75,5 @@ btnCop.addEventListener("click", () => {
   // Copy the text inside the text field
   navigator.clipboard.writeText(textarea.value);
 });
+
+btnDelete.addEventListener("click", () => (textarea.value = ""));

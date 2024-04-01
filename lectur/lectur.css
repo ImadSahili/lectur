@@ -77,4 +77,5 @@ i:hover {
   justify-content: space-between;
   position: relative;
   bottom: 4%;
+  gap: 20px;
 }
