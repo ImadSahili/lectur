@@ -79,3 +79,11 @@ i:hover {
   bottom: 4%;
   gap: 20px;
 }
+
+
+@media screen and (max-width:767px){
+  textarea{
+    height: 80vh !important;
+    max-height: none;
+  }
+}
