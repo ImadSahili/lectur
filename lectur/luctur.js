@@ -1,10 +1,15 @@
-const textarea = document.querySelector("textarea");
-const btnSpeck = document.querySelector("i");
-const btnMacro = document.querySelector("e");
-const select = document.querySelector("select");
-const btnCop = document.getElementById("copy");
-const btnDelete = document.getElementById("delete");
+const textarea = document.querySelector("textarea"),
+  btnSpeck = document.getElementById("Speck"),
+  btnMacro = document.getElementById("microphone"),
+  select = document.querySelector("select"),
+  btnCop = document.getElementById("copy"),
+  btnPaste = document.getElementById("paste"),
+  btnDelete = document.getElementById("delete");
 let lang = "ar-MA";
+
+btnPaste.addEventListener("click", async () => {
+  textarea.value = await navigator.clipboard.readText();
+});
 
 select.addEventListener("change", () => {
   lang = select.value;
